@@ -5,7 +5,8 @@
   "permissions": [
     "activeTab",
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "tabs"
   ],
   "background": {
     "scripts": ["background.js"],
@@ -19,7 +20,8 @@
       "matches": ["http://*/*",
                   "https://*/*"],
       // "css": ["mystyles.css"],
-      "js": ["script.js"]
+
+      "js": ["jquery.js","script.js"]
     }
   ],
   "manifest_version": 2

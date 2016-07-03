@@ -12,7 +12,3 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   // chrome.tabs.insertCSS(specTab.id, {file:"styles.css"});
   // chrome.tabs.executeScript(specTab.id, {file:"script.js"});
 });
-
-function findLinks(){
-	
-}
