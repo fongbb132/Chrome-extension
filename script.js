@@ -31,9 +31,8 @@ function findLinks(){
     // currentLink.addClass('current');
 }
 
-
-//z: 90		f: 70	b:66	enter:13	i:73 	j:74	k:75 	l:76
-var map = {90: false, 70: false, 66: false, 13:false, 73:false, 74: false, 75:false, 76:false};
+//z: 90		f: 70	b:66	enter:13	i:73 	j:74	k:75 	l:76  e:69
+var map = {90: false, 70: false, 69:false, 66: false, 13:false, 73:false, 74: false, 75:false, 76:false};
 $(document).keydown(function(e) {
     var doc = document.documentElement;
     var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
@@ -69,6 +68,9 @@ $(document).keydown(function(e) {
         }
         else if(map[90] && map[13]){
         	window.location = currentLink.attr("href") ;
+        }else if(map[90] && map[69]){
+            currentLink.removeClass('current');
+            currentPos = -1;
         }
     }
 }).keyup(function(e) {
