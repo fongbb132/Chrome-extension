@@ -1,14 +1,40 @@
-// Copyright (c) 2011 The Chromium Authors. All rights reserved.
+// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(function(tab) {
-  // No tabs or host permissions needed!
-  console.log('Turning ' + tab.url + ' red!');
-  chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="grey"'
-  });
-  // chrome.tabs.insertCSS(specTab.id, {file:"styles.css"});
-  // chrome.tabs.executeScript(specTab.id, {file:"script.js"});
-});
+// var currentLink;
+
+
+// function findLinks(){	
+// 	var isSet = false;
+
+// 	var doc = document.documentElement;
+// 	var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+// 	var top = (window.pageYOffset || doc.scrollLeft) - (doc.clientTop || 0);
+	
+// 	$("a").each(function(){
+// 		var link = $(this);
+
+// 		if(!isSet && link.offset().top > top && link.offset().left > left){
+// 			link.css('border',  'thin dashed grey');	
+// 			isSet = true;
+// 		}
+
+// 	});
+	
+// 	alert('fuck the world');
+// }
+
+// findLinks();
+
+// chrome.commands.onCommand.addListener(function(command) {
+
+// 	if (command == 'test') {
+// 		for(var i = 0; i < 100; i++){
+// 			console.log(i);
+// 		}
+// 		findLinks();
+// 	}
+
+// });
+

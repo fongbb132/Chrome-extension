@@ -2,6 +2,7 @@
   "name": "Link Selector",
   "description": "select hyperlinks by using hotkeys",
   "version": "2.0",
+  "manifest_version": 2,
   "permissions": [
     "activeTab",
     "http://*/*",
@@ -9,7 +10,7 @@
     "tabs"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [ "jquery.js" , "background.js" ,"script.js"],
     "persistent": false
   },
   "browser_action": {
@@ -20,9 +21,7 @@
       "matches": ["http://*/*",
                   "https://*/*"],
       // "css": ["mystyles.css"],
-
       "js": ["jquery.js","script.js"]
     }
-  ],
-  "manifest_version": 2
+  ]
 }
